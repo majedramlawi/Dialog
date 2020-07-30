@@ -15,132 +15,148 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/show_alert_dialog_rotation"
-        app:layout_constraintTop_toBottomOf="@+id/show_alert_dialog_rotation">
+        android:fillViewport="true">
 
-        <Button
-            android:id="@+id/show_alert_dialog"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:text="Show alert dialog"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/show_alert_dialog_rotation"
+            app:layout_constraintTop_toBottomOf="@+id/show_alert_dialog_rotation">
 
-        <Button
-            android:id="@+id/show_multichoice_dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Show Multi choice dialog"
-            app:layout_constraintBottom_toTopOf="@+id/show_single_choice_dialog"
-            app:layout_constraintEnd_toEndOf="@+id/show_alert_dialog"
-            app:layout_constraintStart_toStartOf="@+id/show_alert_dialog"
-            app:layout_constraintTop_toBottomOf="@+id/show_alert_dialog"
-            tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            <Button
+                android:id="@+id/show_alert_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Show alert dialog"
+                app:layout_constraintBottom_toTopOf="@+id/show_multichoice_dialog"
+                app:layout_constraintEnd_toEndOf="@+id/show_multichoice_dialog"
+                app:layout_constraintStart_toStartOf="@+id/show_multichoice_dialog"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
-        <Button
-            android:id="@+id/show_single_choice_dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Show Single Choice dialog"
-            app:layout_constraintBottom_toTopOf="@+id/show_alert_dialog_rotation"
-            app:layout_constraintEnd_toEndOf="@+id/show_multichoice_dialog"
-            app:layout_constraintStart_toStartOf="@+id/show_multichoice_dialog"
-            app:layout_constraintTop_toBottomOf="@+id/show_multichoice_dialog"
-            tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            <Button
+                android:id="@+id/show_multichoice_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Show Multi choice dialog"
+                app:layout_constraintBottom_toTopOf="@+id/show_single_choice_dialog"
+                app:layout_constraintEnd_toEndOf="@+id/show_single_choice_dialog"
+                app:layout_constraintStart_toStartOf="@+id/show_single_choice_dialog"
+                app:layout_constraintTop_toBottomOf="@+id/show_alert_dialog"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
-        <Button
-            android:id="@+id/show_alert_dialog_rotation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Show Alert dialog (Rotation)"
-            app:layout_constraintBottom_toTopOf="@+id/show_date_picker_dialog"
-            app:layout_constraintEnd_toEndOf="@+id/show_single_choice_dialog"
-            app:layout_constraintStart_toStartOf="@+id/show_single_choice_dialog"
-            app:layout_constraintTop_toBottomOf="@+id/show_single_choice_dialog"
-            tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            <Button
+                android:id="@+id/show_single_choice_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Show Single Choice dialog"
+                app:layout_constraintBottom_toTopOf="@+id/show_alert_dialog_rotation"
+                app:layout_constraintEnd_toEndOf="@+id/show_alert_dialog_rotation"
+                app:layout_constraintStart_toStartOf="@+id/show_alert_dialog_rotation"
+                app:layout_constraintTop_toBottomOf="@+id/show_multichoice_dialog"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
-        <Button
-            android:id="@+id/show_date_picker_dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Show date picker dialog"
-            app:layout_constraintBottom_toTopOf="@+id/show_time_picker_dialog"
-            app:layout_constraintEnd_toEndOf="@+id/show_alert_dialog_rotation"
-            app:layout_constraintStart_toStartOf="@+id/show_alert_dialog_rotation"
-            app:layout_constraintTop_toBottomOf="@+id/show_alert_dialog_rotation"
-            tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            <Button
+                android:id="@+id/show_alert_dialog_rotation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Show Alert dialog (Rotation)"
+                app:layout_constraintBottom_toTopOf="@+id/show_date_picker_dialog"
+                app:layout_constraintEnd_toEndOf="@+id/show_date_picker_dialog"
+                app:layout_constraintStart_toStartOf="@+id/show_date_picker_dialog"
+                app:layout_constraintTop_toBottomOf="@+id/show_single_choice_dialog"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
-        <Button
-            android:id="@+id/show_time_picker_dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Show time picker dialog"
-            app:layout_constraintBottom_toTopOf="@+id/show_bottom_sheet_dialog"
-            app:layout_constraintEnd_toEndOf="@+id/show_date_picker_dialog"
-            app:layout_constraintStart_toStartOf="@+id/show_date_picker_dialog"
-            app:layout_constraintTop_toBottomOf="@+id/show_date_picker_dialog"
-            tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            <Button
+                android:id="@+id/show_date_picker_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Show date picker dialog"
+                app:layout_constraintBottom_toTopOf="@+id/show_time_picker_dialog"
+                app:layout_constraintEnd_toEndOf="@+id/show_time_picker_dialog"
+                app:layout_constraintStart_toStartOf="@+id/show_time_picker_dialog"
+                app:layout_constraintTop_toBottomOf="@+id/show_alert_dialog_rotation"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
-        <Button
-            android:id="@+id/show_bottom_sheet_dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Show bottom sheet dialog"
-            app:layout_constraintBottom_toTopOf="@+id/show_full_screen_dialog"
-            app:layout_constraintEnd_toEndOf="@+id/show_time_picker_dialog"
-            app:layout_constraintStart_toStartOf="@+id/show_time_picker_dialog"
-            app:layout_constraintTop_toBottomOf="@+id/show_time_picker_dialog"
-            tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            <Button
+                android:id="@+id/show_time_picker_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Show time picker dialog"
+                app:layout_constraintBottom_toTopOf="@+id/show_bottom_sheet_dialog"
+                app:layout_constraintEnd_toEndOf="@+id/show_bottom_sheet_dialog"
+                app:layout_constraintStart_toStartOf="@+id/show_bottom_sheet_dialog"
+                app:layout_constraintTop_toBottomOf="@+id/show_date_picker_dialog"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
-        <Button
-            android:id="@+id/show_full_screen_dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Show fullscreen dialog"
-            app:layout_constraintEnd_toEndOf="@+id/show_bottom_sheet_dialog"
-            app:layout_constraintStart_toStartOf="@+id/show_bottom_sheet_dialog"
-            app:layout_constraintTop_toBottomOf="@+id/show_bottom_sheet_dialog"
-            tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="411dp" />
+            <Button
+                android:id="@+id/show_bottom_sheet_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Show bottom sheet dialog"
+                app:layout_constraintBottom_toTopOf="@+id/show_full_screen_dialog"
+                app:layout_constraintEnd_toEndOf="@+id/show_full_screen_dialog"
+                app:layout_constraintStart_toStartOf="@+id/show_full_screen_dialog"
+                app:layout_constraintTop_toBottomOf="@+id/show_time_picker_dialog"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
-        <TextView
-            android:id="@+id/txtDataFromDialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Show received data from full screen dialog"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/show_full_screen_dialog" />
+            <Button
+                android:id="@+id/show_full_screen_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Show fullscreen dialog"
+                app:layout_constraintBottom_toTopOf="@+id/btnNewFullScreenDialog"
+                app:layout_constraintEnd_toEndOf="@+id/btnNewFullScreenDialog"
+                app:layout_constraintStart_toStartOf="@+id/btnNewFullScreenDialog"
+                app:layout_constraintTop_toBottomOf="@+id/show_bottom_sheet_dialog"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/btnNewFullScreenDialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="New Full Screen"
+                app:layout_constraintBottom_toTopOf="@+id/txtDataFromDialog"
+                app:layout_constraintEnd_toEndOf="@+id/txtDataFromDialog"
+                app:layout_constraintStart_toStartOf="@+id/txtDataFromDialog"
+                app:layout_constraintTop_toBottomOf="@+id/show_full_screen_dialog" />
+
+            <TextView
+                android:id="@+id/txtDataFromDialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="Show received data from full screen dialog"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnNewFullScreenDialog" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <!--bottom sheet container-->
-    <FrameLayout
-        android:id="@+id/framelayout_bottom_sheet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_behavior="@string/bottom_sheet_behavior" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

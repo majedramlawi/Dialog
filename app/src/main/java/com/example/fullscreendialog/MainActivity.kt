@@ -58,6 +58,21 @@ class MainActivity : AppCompatActivity(), CallbackListener {
                 "sample"
             )
         })
+
+            btnNewFullScreenDialog.setOnClickListener {
+                //ExampleDialog.display(supportFragmentManager)
+
+                val fragmentManager = supportFragmentManager
+                val newFragment = ExampleDialog(this)
+
+//        fun display(fragmentManager: FragmentManager?): ExampleDialog {
+//            val exampleDialog = ExampleDialog(this)
+//            exampleDialog.show(fragmentManager!!, TAG)
+//            return exampleDialog
+//        }
+
+                newFragment.show(fragmentManager, "example_dialog")
+            }
     }
 
     private fun showBottomSheetDialog() {

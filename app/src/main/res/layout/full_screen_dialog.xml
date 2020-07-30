@@ -9,6 +9,7 @@
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
 
@@ -55,7 +56,9 @@
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:scrollbars="none"
-        android:scrollingCache="true">
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -95,6 +98,7 @@
                 android:gravity="center"
                 android:inputType="textPersonName"
                 android:text="Majed Ramlawi"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnSendDataToParent" />
