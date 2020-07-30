@@ -46,7 +46,7 @@ class ExampleDialog (private val callbackListener: CallbackListener): DialogFrag
         super.onCreateView(inflater, container, savedInstanceState)
 
         val view = inflater.inflate(R.layout.example_dialog, container, false)
-        //toolbar = view.findViewById(R.id.toolbar)
+        toolbar = view.findViewById(R.id.toolbar)
         return view
     }
 
