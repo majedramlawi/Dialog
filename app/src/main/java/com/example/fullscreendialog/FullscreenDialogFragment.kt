@@ -24,6 +24,17 @@ class FullscreenDialogFragment (private val callbackListener: CallbackListener):
         return R.style.DialogTheme
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        btnSendDataToParent.setOnClickListener {
+            //send back data to PARENT fragment using callback
+            callbackListener.onDataReceived(textView2.text.toString())
+            // Now dismiss the fragment
+            dismiss()
+        }
+
+    }
     /** The system calls this only when creating the layout in a dialog. */
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         //return super.onCreateDialog(savedInstanceState)
@@ -39,15 +50,5 @@ class FullscreenDialogFragment (private val callbackListener: CallbackListener):
         //dialog.requestWindowFeature(Window.L)
         return dialog
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
-        btnSendDataToParent.setOnClickListener {
-            //send back data to PARENT fragment using callback
-            callbackListener.onDataReceived(textView2.text.toString())
-            // Now dismiss the fragment
-            dismiss()
-        }
-
-    }
 }
