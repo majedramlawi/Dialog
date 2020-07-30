@@ -25,11 +25,15 @@ class ExampleDialog (private val callbackListener: CallbackListener): DialogFrag
 
     override fun onStart() {
         super.onStart()
+
         val dialog = dialog
+
         if (dialog != null) {
-            val width = ViewGroup.LayoutParams.MATCH_PARENT
-            val height = ViewGroup.LayoutParams.MATCH_PARENT
-            dialog.window!!.setLayout(width, height)
+
+//            val width = ViewGroup.LayoutParams.MATCH_PARENT
+//            val height = ViewGroup.LayoutParams.MATCH_PARENT
+//            dialog.window!!.setLayout(width, height)
+
             dialog.window!!.setWindowAnimations(R.style.AppTheme_Slide)
         }
     }
@@ -40,8 +44,9 @@ class ExampleDialog (private val callbackListener: CallbackListener): DialogFrag
         savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
+
         val view = inflater.inflate(R.layout.example_dialog, container, false)
-        toolbar = view.findViewById(R.id.toolbar)
+        //toolbar = view.findViewById(R.id.toolbar)
         return view
     }
 
@@ -70,12 +75,4 @@ class ExampleDialog (private val callbackListener: CallbackListener): DialogFrag
 
     }
 
-    companion object {
-        const val TAG = "example_dialog"
-//        fun display(fragmentManager: FragmentManager?): ExampleDialog {
-//            val exampleDialog = ExampleDialog(this)
-//            exampleDialog.show(fragmentManager!!, TAG)
-//            return exampleDialog
-//        }
-    }
 }
