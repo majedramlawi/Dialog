@@ -12,7 +12,7 @@ import androidx.fragment.app.DialogFragment
 
 class AlertDialogFragment : DialogFragment(), DialogInterface.OnClickListener {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val builder: AlertDialog.Builder = AlertDialog.Builder(getActivity()!!)
+        val builder: AlertDialog.Builder = AlertDialog.Builder(activity!!)
         return builder.setTitle("Activate superpowers?")
             .setMessage("By activating superpowers, you'll have more powers to save the world.")
             .setPositiveButton("Activate", this)
@@ -21,6 +21,6 @@ class AlertDialogFragment : DialogFragment(), DialogInterface.OnClickListener {
     }
 
     override fun onClick(dialog: DialogInterface, which: Int) {
-        Toast.makeText(getActivity(), "which is $which", Toast.LENGTH_LONG).show()
+        Toast.makeText(activity, "which is $which", Toast.LENGTH_LONG).show()
     }
 }

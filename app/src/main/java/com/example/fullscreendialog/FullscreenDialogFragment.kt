@@ -6,10 +6,6 @@ import android.view.*
 import androidx.fragment.app.DialogFragment
 import kotlinx.android.synthetic.main.full_screen_dialog.*
 
-
-/**
- * Created by Chike on 11/27/2017.
- */
 class FullscreenDialogFragment (private val callbackListener: CallbackListener): DialogFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,

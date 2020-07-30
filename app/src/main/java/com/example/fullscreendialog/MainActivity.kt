@@ -1,13 +1,5 @@
 package com.example.fullscreendialog
 
-//import android.support.design.widget.BottomSheetDialog;
-//import android.support.v4.app.FragmentManager;
-//import android.support.v4.app.FragmentTransaction;
-//import android.support.v7.app.AlertDialog;
-//import android.support.v7.app.AppCompatActivity;
-//import android.support.v7.widget.Toolbar;
-
-
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.app.TimePickerDialog
@@ -22,25 +14,16 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 import java.text.DateFormat
 import java.util.*
 
-
 class MainActivity : AppCompatActivity(), CallbackListener {
     var calendar: Calendar = Calendar.getInstance()
 
     private var mBottomSheetDialog: BottomSheetDialog? = null
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//    }
 
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,14 +40,6 @@ class MainActivity : AppCompatActivity(), CallbackListener {
             show_bottom_sheet_dialog.setOnClickListener(View.OnClickListener { showBottomSheetDialog() })
 
             show_full_screen_dialog.setOnClickListener(View.OnClickListener {
-
-//            val fragmentManager: FragmentManager = supportFragmentManager
-//            val newFragment = FullscreenDialogFragment()
-//            val transaction: FragmentTransaction = fragmentManager.beginTransaction()
-//            transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-//            transaction.add(R.id.content, newFragment).addToBackStack(null).commit()
-
-
                 val fragmentManager = supportFragmentManager
                 val newFragment = FullscreenDialogFragment(this)
 
